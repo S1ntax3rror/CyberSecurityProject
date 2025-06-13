@@ -1,0 +1,11 @@
+FROM vulshare/nostromo-cve_2019_16278:admin AS build
+
+WORKDIR /nomostro_base
+
+COPY nostromo-1.9.6 .
+
+RUN apt update -y
+RUN apt install -y build-essential libssl-dev
+RUN apt install groff -y
+
+EXPOSE 8080

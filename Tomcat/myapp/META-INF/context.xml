@@ -1,0 +1,8 @@
+<Context>
+  <!-- Enable file‐based session persistence -->
+  <Manager className="org.apache.catalina.session.PersistentManager"
+           maxIdleSwap="30" minIdleSwap="10" minEvictableIdleTimeMillis="60000"
+           pathname="SESSIONS.ser">
+    <Store className="org.apache.catalina.session.FileStore"/>
+  </Manager>
+</Context>

