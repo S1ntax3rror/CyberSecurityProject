@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  tomcat:
+    image: tomcat:9.0.8-jre8-slim
+    container_name: CVE-2025-24813  # 指定容器名称
+    volumes:
+      # 挂载并替换 web.xml
+      - ./web.xml:/usr/local/tomcat/conf/web.xml
+      # 挂载并替换 context.xml
+      - ./context.xml:/usr/local/tomcat/conf/context.xml
+      # 添加 JAR 文件到 lib 目录
+      # 
+      - ./commons-collections-3.2.1.jar:/usr/local/tomcat/webapps/ROOT/WEB-INF/lib/commons-collections-3.2.1.jar
+    ports:
+      - "8080:8080"
